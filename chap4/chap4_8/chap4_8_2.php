@@ -1,10 +1,10 @@
 <?php
   function getPrice($cnt){
-    500 * $cnt;
-    if($cnt <= -1){
-      var_dump(0);
+    if($cnt < 0){
+      return 0;
     }
+    return 500 * $cnt;
   }
 
-  getPrice(-3);
+  var_dump(getPrice(-3));
 ?>
